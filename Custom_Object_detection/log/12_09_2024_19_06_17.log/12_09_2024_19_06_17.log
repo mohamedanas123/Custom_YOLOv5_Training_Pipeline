@@ -1,0 +1,20 @@
+[ 2024-12-09 19:06:19,226 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.16.10.186:8080
+[ 2024-12-09 19:06:19,227 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-09 19:06:27,454 ] werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 19:06:27] "GET / HTTP/1.1" 200 -
+[ 2024-12-09 19:06:29,207 ] root - INFO - Updated DATA_DOWNLOAD_URL to: https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link
+[ 2024-12-09 19:06:29,208 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-12-09 19:06:29,209 ] root - INFO - Getting the data from URL
+[ 2024-12-09 19:06:29,209 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2024-12-09 19:06:29,211 ] root - INFO - Downloading data from https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link into file artifacts\data_ingestion\data.zip
+[ 2024-12-09 19:06:29,212 ] root - ERROR - Error during training: Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [98] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [37] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [91] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [57] error message [name 'download_with_retries' is not defined]]]]
+[ 2024-12-09 19:06:29,212 ] werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 19:06:29] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+[ 2024-12-09 19:06:30,798 ] root - INFO - Updated DATA_DOWNLOAD_URL to: https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link
+[ 2024-12-09 19:06:30,799 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-12-09 19:06:30,799 ] root - INFO - Getting the data from URL
+[ 2024-12-09 19:06:30,799 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2024-12-09 19:06:30,800 ] root - INFO - Downloading data from https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link into file artifacts\data_ingestion\data.zip
+[ 2024-12-09 19:06:30,800 ] root - ERROR - Error during training: Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [98] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [37] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [91] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [57] error message [name 'download_with_retries' is not defined]]]]
+[ 2024-12-09 19:06:30,801 ] werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 19:06:30] "[35m[1mPOST /train HTTP/1.1[0m" 500 -

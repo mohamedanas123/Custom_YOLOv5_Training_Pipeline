@@ -1,0 +1,40 @@
+[ 2024-12-08 23:03:55,520 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.93.153:8080
+[ 2024-12-08 23:03:55,520 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-08 23:03:56,144 ] werkzeug - INFO - 127.0.0.1 - - [08/Dec/2024 23:03:56] "GET / HTTP/1.1" 200 -
+[ 2024-12-08 23:03:59,089 ] root - INFO - Updated DATA_DOWNLOAD_URL to: https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUB-2vf61/view?usp=share_link
+[ 2024-12-08 23:03:59,089 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-12-08 23:03:59,090 ] root - INFO - Getting the data from URL
+[ 2024-12-08 23:03:59,090 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2024-12-08 23:03:59,091 ] root - INFO - Downloading data from https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUB-2vf61/view?usp=share_link into file artifacts\data_ingestion\data.zip
+[ 2024-12-08 23:04:00,432 ] root - ERROR - Error during training: Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [98] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [37] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [71] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [36] error message [Failed to retrieve file url:
+
+	Cannot retrieve the public link of the file. You may need to change
+	the permission to 'Anyone with the link', or have had many accesses.
+	Check FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?/export=download&id=1ECfl3dtYyfivY8kYPq7RHUB-2vf61
+
+but Gdown can't. Please check connections and permissions.]]]]
+[ 2024-12-08 23:04:00,433 ] werkzeug - INFO - 127.0.0.1 - - [08/Dec/2024 23:04:00] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+[ 2024-12-08 23:05:13,084 ] root - INFO - Updated DATA_DOWNLOAD_URL to: https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUB-2vf61/view?usp=share_link
+[ 2024-12-08 23:05:13,084 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-12-08 23:05:13,085 ] root - INFO - Getting the data from URL
+[ 2024-12-08 23:05:13,085 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2024-12-08 23:05:13,086 ] root - INFO - Downloading data from https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUB-2vf61/view?usp=share_link into file artifacts\data_ingestion\data.zip
+[ 2024-12-08 23:05:13,927 ] root - ERROR - Error during training: Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [98] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [37] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [71] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [36] error message [Failed to retrieve file url:
+
+	Cannot retrieve the public link of the file. You may need to change
+	the permission to 'Anyone with the link', or have had many accesses.
+	Check FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?/export=download&id=1ECfl3dtYyfivY8kYPq7RHUB-2vf61
+
+but Gdown can't. Please check connections and permissions.]]]]
+[ 2024-12-08 23:05:13,930 ] werkzeug - INFO - 127.0.0.1 - - [08/Dec/2024 23:05:13] "[35m[1mPOST /train HTTP/1.1[0m" 500 -

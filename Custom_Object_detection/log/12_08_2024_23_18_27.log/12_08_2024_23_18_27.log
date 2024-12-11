@@ -1,0 +1,11 @@
+[ 2024-12-08 23:18:28,843 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.93.153:8080
+[ 2024-12-08 23:18:28,843 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-08 23:18:30,876 ] werkzeug - INFO - 127.0.0.1 - - [08/Dec/2024 23:18:30] "GET / HTTP/1.1" 200 -
+[ 2024-12-08 23:18:33,287 ] root - ERROR - Error during training: No module named 'wasteDetection.constant.config'
+[ 2024-12-08 23:18:33,287 ] werkzeug - INFO - 127.0.0.1 - - [08/Dec/2024 23:18:33] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+[ 2024-12-08 23:18:59,241 ] werkzeug - INFO - 127.0.0.1 - - [08/Dec/2024 23:18:59] "GET / HTTP/1.1" 200 -
+[ 2024-12-08 23:19:01,301 ] root - ERROR - Error during training: No module named 'wasteDetection.constant.config'
+[ 2024-12-08 23:19:01,302 ] werkzeug - INFO - 127.0.0.1 - - [08/Dec/2024 23:19:01] "[35m[1mPOST /train HTTP/1.1[0m" 500 -

@@ -1,0 +1,12 @@
+[ 2024-12-10 14:11:42,361 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.137.106:8080
+[ 2024-12-10 14:11:42,361 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-10 14:11:45,972 ] werkzeug - INFO - 127.0.0.1 - - [10/Dec/2024 14:11:45] "GET / HTTP/1.1" 200 -
+[ 2024-12-10 14:12:04,317 ] werkzeug - INFO - 127.0.0.1 - - [10/Dec/2024 14:12:04] "[33mGET /streams-logs HTTP/1.1[0m" 404 -
+[ 2024-12-10 14:12:32,471 ] werkzeug - INFO - 127.0.0.1 - - [10/Dec/2024 14:12:32] "[33mGET /streams-logs HTTP/1.1[0m" 404 -
+[ 2024-12-10 14:12:35,956 ] werkzeug - INFO - 127.0.0.1 - - [10/Dec/2024 14:12:35] "GET / HTTP/1.1" 200 -
+[ 2024-12-10 14:12:37,167 ] werkzeug - INFO - 127.0.0.1 - - [10/Dec/2024 14:12:37] "GET / HTTP/1.1" 200 -
+[ 2024-12-10 14:12:38,394 ] werkzeug - INFO - 127.0.0.1 - - [10/Dec/2024 14:12:38] "GET / HTTP/1.1" 200 -
+[ 2024-12-10 14:14:08,679 ] werkzeug - INFO - 127.0.0.1 - - [10/Dec/2024 14:14:08] "GET / HTTP/1.1" 200 -

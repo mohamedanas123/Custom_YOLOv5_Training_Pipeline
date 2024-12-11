@@ -1,0 +1,28 @@
+[ 2024-12-09 19:08:42,692 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.16.10.186:8080
+[ 2024-12-09 19:08:42,692 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-09 19:08:44,564 ] werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 19:08:44] "GET / HTTP/1.1" 200 -
+[ 2024-12-09 19:08:46,581 ] root - INFO - Updated DATA_DOWNLOAD_URL to: https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link
+[ 2024-12-09 19:08:46,581 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-12-09 19:08:46,582 ] root - INFO - Getting the data from URL
+[ 2024-12-09 19:08:46,583 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2024-12-09 19:08:46,583 ] root - INFO - Downloading data from https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link into file artifacts\data_ingestion\data.zip
+[ 2024-12-09 19:11:27,502 ] root - INFO - Downloaded data from https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link into file artifacts\data_ingestion\data.zip
+[ 2024-12-09 19:11:30,521 ] root - INFO - Extracting zip file: artifacts\data_ingestion\data.zip into dir: artifacts\data_ingestion\feature_store
+[ 2024-12-09 19:11:30,521 ] root - INFO - Exited initiate_data_ingestion method of Data_Ingestion class
+[ 2024-12-09 19:11:30,523 ] root - INFO - Data ingestion artifact: DataIngestionArtifact(data_zip_file_path='artifacts\\data_ingestion\\data.zip', feature_store_path='artifacts\\data_ingestion\\feature_store')
+[ 2024-12-09 19:11:30,523 ] root - INFO - Got the data from URL
+[ 2024-12-09 19:11:30,523 ] root - INFO - Exited the start_data_ingestion method of TrainPipeline class
+[ 2024-12-09 19:11:30,523 ] root - INFO - Entered the start_data_validation method of TrainPipeline class
+[ 2024-12-09 19:11:30,523 ] root - INFO - Entered initiate_data_validation method of DataValidation class
+[ 2024-12-09 19:11:30,524 ] root - INFO - Exited initiate_data_validation method of DataValidation class
+[ 2024-12-09 19:11:30,524 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=True)
+[ 2024-12-09 19:11:30,546 ] root - INFO - Performed the data validation operation
+[ 2024-12-09 19:11:30,546 ] root - INFO - Exited the start_data_validation method of TrainPipeline class
+[ 2024-12-09 19:11:30,546 ] root - INFO - Entered initiate_model_trainer method of ModelTrainer class
+[ 2024-12-09 19:11:30,546 ] root - INFO - Unzipping data
+[ 2024-12-09 19:11:33,654 ] root - INFO - Read yaml file successfully
+[ 2024-12-09 19:24:08,100 ] root - ERROR - Error during training: Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [104] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [84] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\model_trainer.py] line number [51] error message [[Errno 2] No such file or directory: 'yolov5/runs/train/yolov5s_results/weights/best.pt']]]
+[ 2024-12-09 19:24:08,197 ] werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 19:24:08] "[35m[1mPOST /train HTTP/1.1[0m" 500 -

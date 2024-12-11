@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object Detection Training</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .logs {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .advanced-section {
+            margin-top: 20px;
+            display: none;
+        }
+        .advanced-toggle {
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: #3498db;
+            animation: spin 1s ease infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Train object Detection Model</h1>
+        <form id="trainForm">
+            <label for="dataLink">Google Drive Link:</label>
+            <input type="text" id="dataLink" name="dataLink" placeholder="Enter Google Drive link" required>
+
+            <div class="advanced-toggle" id="advancedToggle">Advanced Options</div>
+            <div class="advanced-section" id="advancedSection">
+                <label for="epochs">Epochs:</label>
+                <input type="number" id="epochs" name="epochs" placeholder="Enter number of epochs" value="1" min="1">
+
+                <label for="batchSize">Batch Size:</label>
+                <input type="number" id="batchSize" name="batchSize" placeholder="Enter batch size" value="16" min="1">
+            </div>
+
+            <button type="submit">Start Training</button>
+        </form>
+        <div id="responseMessage" class="response" style="display: none;"></div>
+        <div id="logs" class="logs" style="display: none;"></div>
+    </div>
+
+    <script>
+        // Toggle Advanced Section
+        const advancedToggle = document.getElementById('advancedToggle');
+        const advancedSection = document.getElementById('advancedSection');
+
+        advancedToggle.addEventListener('click', () => {
+            const isVisible = advancedSection.style.display === 'block';
+            advancedSection.style.display = isVisible ? 'none' : 'block';
+            advancedToggle.textContent = isVisible ? 'Advanced Options' : 'Hide Advanced Options';
+        });
+
+        // Form Submission
+        document.getElementById('trainForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const dataLink = document.getElementById('dataLink').value.trim();
+            const epochs = parseInt(document.getElementById('epochs').value.trim(), 10) || 1;
+            const batchSize = parseInt(document.getElementById('batchSize').value.trim(), 10) || 16;
+
+            const responseMessage = document.getElementById('responseMessage');
+            const logsContainer = document.getElementById('logs');
+            responseMessage.style.display = 'block';
+            logsContainer.style.display = 'none';
+            responseMessage.style.color = 'black';
+            responseMessage.innerHTML = '<div class="spinner"></div> Training in progress...';
+
+            try {
+                // Start the training process
+                const response = await fetch('/train', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ data_link: dataLink, epochs, batch_size: batchSize }),
+                });
+
+                if (response.ok) {
+                    responseMessage.style.color = 'green';
+                    responseMessage.textContent = 'Training initiated. Fetching logs...';
+                    
+                    // Show logs
+                    logsContainer.style.display = 'block';
+                    logsContainer.textContent = '';
+                    const eventSource = new EventSource('/stream-logs');
+
+                    eventSource.onmessage = function(event) {
+                        logsContainer.textContent += event.data + '\n';
+                        logsContainer.scrollTop = logsContainer.scrollHeight; // Auto-scroll to the bottom
+                    };
+
+                    eventSource.onerror = function() {
+                        logsContainer.textContent += '\n[Error] Lost connection to server.';
+                        eventSource.close();
+                    };
+                } else {
+                    const errorText = await response.text();
+                    responseMessage.style.color = 'red';
+                    responseMessage.textContent = `Error: ${errorText}`;
+                }
+            } catch (error) {
+                responseMessage.style.color = 'red';
+                responseMessage.textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>

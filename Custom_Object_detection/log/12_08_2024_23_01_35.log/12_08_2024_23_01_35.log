@@ -1,0 +1,13 @@
+[ 2024-12-08 23:01:37,440 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.93.153:8080
+[ 2024-12-08 23:01:37,440 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-08 23:01:38,556 ] werkzeug - INFO - 127.0.0.1 - - [08/Dec/2024 23:01:38] "GET / HTTP/1.1" 200 -
+[ 2024-12-08 23:01:40,963 ] root - INFO - Updated DATA_DOWNLOAD_URL to: https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUB-2vf61/view?usp=share_link
+[ 2024-12-08 23:01:40,965 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-12-08 23:01:40,967 ] root - INFO - Getting the data from URL
+[ 2024-12-08 23:01:40,968 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2024-12-08 23:01:40,969 ] root - INFO - Downloading data from  into file artifacts\data_ingestion\data.zip
+[ 2024-12-08 23:01:40,969 ] root - ERROR - Error during training: Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [98] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [37] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [71] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [34] error message [list index out of range]]]]
+[ 2024-12-08 23:01:40,970 ] werkzeug - INFO - 127.0.0.1 - - [08/Dec/2024 23:01:40] "[35m[1mPOST /train HTTP/1.1[0m" 500 -

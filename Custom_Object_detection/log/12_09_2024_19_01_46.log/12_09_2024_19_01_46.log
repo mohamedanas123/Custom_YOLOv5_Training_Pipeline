@@ -1,0 +1,18 @@
+[ 2024-12-09 19:01:48,529 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.16.10.186:8080
+[ 2024-12-09 19:01:48,529 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-09 19:01:49,558 ] werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 19:01:49] "GET / HTTP/1.1" 200 -
+[ 2024-12-09 19:01:51,160 ] root - INFO - Updated DATA_DOWNLOAD_URL to: https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link
+[ 2024-12-09 19:01:51,160 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-12-09 19:01:51,162 ] root - INFO - Getting the data from URL
+[ 2024-12-09 19:01:51,162 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2024-12-09 19:01:51,162 ] root - ERROR - Error during training: Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [98] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [37] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [71] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [26] error message [name 'data_url' is not defined]]]]
+[ 2024-12-09 19:01:51,163 ] werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 19:01:51] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+[ 2024-12-09 19:01:56,482 ] root - INFO - Updated DATA_DOWNLOAD_URL to: https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link
+[ 2024-12-09 19:01:56,483 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-12-09 19:01:56,483 ] root - INFO - Getting the data from URL
+[ 2024-12-09 19:01:56,483 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2024-12-09 19:01:56,483 ] root - ERROR - Error during training: Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [98] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\pipeline\training_pipeline.py] line number [37] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [71] error message [Error occurred python script name [E:\New\main_yolo_v5\End-to-end-Waste-Detection-Using-Yolo-v5-main\wasteDetection\components\data_ingestion.py] line number [26] error message [name 'data_url' is not defined]]]]
+[ 2024-12-09 19:01:56,484 ] werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 19:01:56] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
