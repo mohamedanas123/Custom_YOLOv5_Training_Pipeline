@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>object Detection Training</title>
+    <title>Object Detection Training</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -99,7 +99,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Train object Detection Model</h1>
+        <h1>Train Object Detection Model</h1>
         <form id="trainForm">
             <label for="dataLink">Google Drive Link:</label>
             <input type="text" id="dataLink" name="dataLink" placeholder="Enter Google Drive link" required>
@@ -115,8 +115,13 @@
 
             <button type="submit">Start Training</button>
         </form>
+
+        <!-- Response and Logs -->
         <div id="responseMessage" class="response" style="display: none;"></div>
         <div id="logs" class="logs" style="display: none;"></div>
+
+        <!-- Download Model Button -->
+        <button id="downloadButton" onclick="downloadModel()">Download Trained Model</button>
     </div>
 
     <script>
@@ -171,6 +176,9 @@
                         logsContainer.textContent += '\n[Error] Lost connection to server.';
                         eventSource.close();
                     };
+
+                    // Show the download button once training starts
+                    document.getElementById('downloadButton').style.display = 'block';
                 } else {
                     const errorText = await response.text();
                     responseMessage.style.color = 'red';
@@ -181,6 +189,11 @@
                 responseMessage.textContent = `Error: ${error.message}`;
             }
         });
+
+        // Function to handle model download
+        function downloadModel() {
+            window.location.href = '/download-model';
+        }
     </script>
 </body>
 </html>

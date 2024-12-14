@@ -1,0 +1,141 @@
+[ 2024-12-14 17:51:30,404 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.62.153:8080
+[ 2024-12-14 17:51:30,405 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-14 17:51:35,249 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 17:51:35] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 17:51:37,618 ] root - INFO - Updated DATA_DOWNLOAD_URL to: https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link
+[ 2024-12-14 17:51:37,618 ] root - INFO - Training parameters - Epochs: 1, Batch Size: 16
+[ 2024-12-14 17:51:37,619 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-12-14 17:51:37,619 ] root - INFO - Getting the data from URL
+[ 2024-12-14 17:51:37,620 ] root - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+[ 2024-12-14 17:51:37,620 ] root - INFO - Downloading data from https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link into file artifacts\data_ingestion\data.zip
+[ 2024-12-14 17:52:35,044 ] root - INFO - Downloaded data from https://drive.google.com/file/d/1ECfl3dtYyfivY8kYPq7RHUBTjC-2vf61/view?usp=share_link into file artifacts\data_ingestion\data.zip
+[ 2024-12-14 17:52:37,534 ] root - INFO - Extracting zip file: artifacts\data_ingestion\data.zip into dir: artifacts\data_ingestion\feature_store
+[ 2024-12-14 17:52:37,534 ] root - INFO - Exited initiate_data_ingestion method of Data_Ingestion class
+[ 2024-12-14 17:52:37,534 ] root - INFO - Data ingestion artifact: DataIngestionArtifact(data_zip_file_path='artifacts\\data_ingestion\\data.zip', feature_store_path='artifacts\\data_ingestion\\feature_store')
+[ 2024-12-14 17:52:37,534 ] root - INFO - Got the data from URL
+[ 2024-12-14 17:52:37,534 ] root - INFO - Exited the start_data_ingestion method of TrainPipeline class
+[ 2024-12-14 17:52:37,534 ] root - INFO - Entered the start_data_validation method of TrainPipeline class
+[ 2024-12-14 17:52:37,534 ] root - INFO - Entered initiate_data_validation method of DataValidation class
+[ 2024-12-14 17:52:37,537 ] root - INFO - Exited initiate_data_validation method of DataValidation class
+[ 2024-12-14 17:52:37,537 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=True)
+[ 2024-12-14 17:52:37,557 ] root - INFO - Performed the data validation operation
+[ 2024-12-14 17:52:37,558 ] root - INFO - Exited the start_data_validation method of TrainPipeline class
+[ 2024-12-14 17:52:37,558 ] root - INFO - Entered initiate_model_trainer method of ModelTrainer class
+[ 2024-12-14 17:52:37,558 ] root - INFO - Unzipping data
+[ 2024-12-14 17:52:40,760 ] root - INFO - Read yaml file successfully
+[ 2024-12-14 17:59:21,236 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.62.153:8080
+[ 2024-12-14 17:59:21,236 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-14 17:59:34,298 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 17:59:34] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 17:59:34,507 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 17:59:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2024-12-14 18:00:27,415 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:00:27] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:00:28,261 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:00:28] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:00:33,096 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.62.153:8080
+[ 2024-12-14 18:00:33,096 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-14 18:00:35,774 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:00:35] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:00:36,310 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:00:36] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:00:36,974 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:00:36] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:00:37,222 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:00:37] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:00:37,444 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:00:37] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:01,456 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.62.153:8080
+[ 2024-12-14 18:01:01,456 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-14 18:01:03,521 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:03] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:04,141 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:04] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:04,698 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:04] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:04,945 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:04] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:05,200 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:05] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:11,872 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.62.153:8080
+[ 2024-12-14 18:01:11,872 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-14 18:01:23,764 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:23] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:42,063 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:42] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:42,852 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:42] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:43,615 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:43] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:48,238 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.62.153:8080
+[ 2024-12-14 18:01:48,238 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-14 18:01:50,348 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:50] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:50,894 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:50] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:51,791 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:51] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:01:52,056 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:01:52] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:02:59,563 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.62.153:8080
+[ 2024-12-14 18:02:59,564 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-14 18:03:04,295 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:03:04] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:03:04,911 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:03:04] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:03:06,198 ] root - ERROR - Model file not found at ./artifacts/modeltrainer/model.pth
+[ 2024-12-14 18:03:06,198 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:03:06] "[33mGET /download-model HTTP/1.1[0m" 404 -
+[ 2024-12-14 18:03:08,254 ] root - ERROR - Model file not found at ./artifacts/modeltrainer/model.pth
+[ 2024-12-14 18:03:08,255 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:03:08] "[33mGET /download-model HTTP/1.1[0m" 404 -
+[ 2024-12-14 18:03:11,604 ] root - ERROR - Model file not found at ./artifacts/modeltrainer/model.pth
+[ 2024-12-14 18:03:11,605 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:03:11] "[33mGET /download-model HTTP/1.1[0m" 404 -
+[ 2024-12-14 18:03:30,296 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.62.153:8080
+[ 2024-12-14 18:03:30,296 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-14 18:03:33,329 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:03:33] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:03:33,773 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:03:33] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:03:35,080 ] root - ERROR - Model file not found at ./artifacts/modeltrainer/best.pt
+[ 2024-12-14 18:03:35,081 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:03:35] "[33mGET /download-model HTTP/1.1[0m" 404 -
+[ 2024-12-14 18:04:22,871 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.62.153:8080
+[ 2024-12-14 18:04:22,872 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-14 18:04:22,875 ] werkzeug - INFO -  * Restarting with stat
+[ 2024-12-14 18:04:24,065 ] werkzeug - WARNING -  * Debugger is active!
+[ 2024-12-14 18:04:24,069 ] werkzeug - INFO -  * Debugger PIN: 343-678-994
+[ 2024-12-14 18:04:27,841 ] werkzeug - INFO -  * Detected change in 'E:\\New\\main_yolo_v5\\Custom_Object_detection\\app.py', reloading
+[ 2024-12-14 18:04:27,926 ] werkzeug - INFO -  * Restarting with stat
+[ 2024-12-14 18:04:29,067 ] werkzeug - WARNING -  * Debugger is active!
+[ 2024-12-14 18:04:29,072 ] werkzeug - INFO -  * Debugger PIN: 343-678-994
+[ 2024-12-14 18:04:32,783 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:04:32] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:04:33,254 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:04:33] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:04:34,644 ] root - ERROR - Model file not found at ./artifacts/modeltrainer/
+[ 2024-12-14 18:04:34,644 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:04:34] "[33mGET /download-model HTTP/1.1[0m" 404 -
+[ 2024-12-14 18:05:08,793 ] werkzeug - INFO -  * Detected change in 'E:\\New\\main_yolo_v5\\Custom_Object_detection\\app.py', reloading
+[ 2024-12-14 18:05:08,877 ] werkzeug - INFO -  * Restarting with stat
+[ 2024-12-14 18:05:10,231 ] werkzeug - WARNING -  * Debugger is active!
+[ 2024-12-14 18:05:10,238 ] werkzeug - INFO -  * Debugger PIN: 343-678-994
+[ 2024-12-14 18:05:12,996 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:05:12] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:05:14,550 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:05:14] "GET /download-model HTTP/1.1" 200 -
+[ 2024-12-14 18:14:23,418 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.62.153:8080
+[ 2024-12-14 18:14:23,418 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-14 18:14:23,420 ] werkzeug - INFO -  * Restarting with stat
+[ 2024-12-14 18:14:24,738 ] werkzeug - WARNING -  * Debugger is active!
+[ 2024-12-14 18:14:24,742 ] werkzeug - INFO -  * Debugger PIN: 343-678-994
+[ 2024-12-14 18:14:39,524 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:14:39] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:16:14,782 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:16:14] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:16:15,487 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:16:15] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:16:21,219 ] werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.62.153:8080
+[ 2024-12-14 18:16:21,219 ] werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2024-12-14 18:16:21,222 ] werkzeug - INFO -  * Restarting with stat
+[ 2024-12-14 18:16:22,695 ] werkzeug - WARNING -  * Debugger is active!
+[ 2024-12-14 18:16:22,698 ] werkzeug - INFO -  * Debugger PIN: 343-678-994
+[ 2024-12-14 18:16:23,548 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:16:23] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:16:24,117 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:16:24] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:16:25,072 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:16:25] "GET / HTTP/1.1" 200 -
+[ 2024-12-14 18:16:35,505 ] werkzeug - INFO - 127.0.0.1 - - [14/Dec/2024 18:16:35] "GET / HTTP/1.1" 200 -

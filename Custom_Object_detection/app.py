@@ -1,14 +1,14 @@
 import os
 import shutil
 import sys
-from flask import Flask, jsonify, render_template, request, Response
+from flask import Flask, jsonify, render_template, request, Response, send_from_directory
 from flask_cors import CORS
-from wasteDetection.pipeline.training_pipeline import TrainPipeline
-from wasteDetection.utils.main_utils import decodeImage, encodeImageIntoBase64
-from wasteDetection.constant.application import APP_HOST, APP_PORT
-from wasteDetection.logger import logging
-from wasteDetection.exception import AppException
-from wasteDetection.constant.training_pipeline.config import set_data
+from object_detection.pipeline.training_pipeline import TrainPipeline
+from object_detection.utils.main_utils import decodeImage, encodeImageIntoBase64
+from object_detection.constant.application import APP_HOST, APP_PORT
+from object_detection.logger import logging
+from object_detection.exception import AppException
+from object_detection.constant.training_pipeline.config import set_data
 
 app = Flask(__name__)
 CORS(app)
@@ -50,11 +50,32 @@ def trainRoute():
         return Response(str(e), status=500)
 
 
+@app.route('/download-model', methods=['GET'])
+def download_model():
+    try:
+        # Define the path to the model file
+        model_path = "./object_detection/artifacts/modeltrainer/best.pt"
+        
+        if not os.path.exists(model_path):
+            logging.error(f"Model file not found at {model_path}")
+            return Response("Model file not found", status=404)
+
+        # Serve the model file for download
+        return send_from_directory(
+            directory=os.path.dirname(model_path),
+            path=os.path.basename(model_path),
+            as_attachment=True
+        )
+    except Exception as e:
+        logging.error(f"Error while preparing model for download: {str(e)}")
+        return Response(str(e), status=500)
+
+
 @app.route('/')
 def home():
     return render_template('index.html')
 
 
 if __name__ == "__main__":
-    print("server running",APP_PORT)
-    app.run(host=APP_HOST, port=APP_PORT)
+    print("server running", APP_PORT)
+    app.run(host=APP_HOST, port=APP_PORT,debug=True)
